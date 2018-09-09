@@ -1,0 +1,83 @@
+ScreenManagement:
+    HomeScreen:
+    SpeedTest:
+    DeviceManager:
+    ParentalControls:
+    BandwidthMonitor:
+
+<HomeScreen>:
+    name: "Home"
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: "Speed Test"
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            pos_hint: {'x': 0}
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'SpeedTest'
+
+        Button:
+            text: "Device Manager"
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            pos_hint: {'right': 1}
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'DeviceManager'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: "Parental Controls"
+            pos_hint: {'right': 1}
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'ParentalControls'
+
+        Button:
+            text: "Bandwidth Monitor"
+            pos_hint: {'top': 1}
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'BandwidthMonitor'
+
+<SpeedTest>:
+    name: "SpeedTest"
+    Button:
+        text: 'Home'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        pos_hint: {'right': 0}
+        on_press:
+            app.root.transition.direction = 'right'
+            app.root.current = 'Home'
+    Label:
+        text: "Speed Test"
+
+    Button:
+        text: 'Speed Test'
+        on_press:
+            app.test()
+
+<DeviceManager>:
+    name: "DeviceManager"
+    Label:
+        text: "Device Manager"
+
+<ParentalControls>:
+    name: "ParentalControls"
+    Label:
+        text: "Parental Controls"
+
+<BandwidthMonitor>:
+    name: "BandwidthMonitor"
+    Label:
+        text: "Bandwidth Monitor"
+
+
+
