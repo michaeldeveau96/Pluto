@@ -5,6 +5,11 @@ ScreenManagement:
     ParentalControls:
     BandwidthMonitor:
 
+<InitializerScreen>:
+    name: "Initializer"
+    Label:
+        text: "Initializer"
+
 <HomeScreen>:
     name: "Home"
     BoxLayout:
@@ -67,6 +72,9 @@ ScreenManagement:
     name: "DeviceManager"
     Label:
         text: "Device Manager"
+    Button:
+        text: 'Get Neighbors'
+        on_press: root.get_neighbors()
 
 <ParentalControls>:
     name: "ParentalControls"

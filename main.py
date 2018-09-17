@@ -10,6 +10,7 @@ from SpeedTest import SpeedTest
 from BandwidthMonitor import BandwidthMonitor
 from ParentalControls import ParentalControls
 from DeviceManager import DeviceManager
+from InitializerScreen import InitializerScreen
 from ScreenManagement import ScreenManager
 
 

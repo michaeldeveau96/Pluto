@@ -16,3 +16,6 @@ class SpeedTest(Screen):
         up = round(st.upload(),2)
         upMbps = up * 0.000001
         print("Upload: " + str(int(upMbps)) + ' Mbps')
+
+    def processSpeeds(self):
+        pass
