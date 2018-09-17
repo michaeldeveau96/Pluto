@@ -10,7 +10,8 @@ from SpeedTest import SpeedTest
 from BandwidthMonitor import BandwidthMonitor
 from ParentalControls import ParentalControls
 from DeviceManager import DeviceManager
-from ScreenManagement import ScreenManagement
+from InitializerScreen import InitializerScreen
+from ScreenManagement import ScreenManager
 
 
 pluto = Builder.load_file('pluto.kv')
