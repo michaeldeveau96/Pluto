@@ -1,9 +1,23 @@
 from kivy.uix.screenmanager import Screen
-import nmap
+
+import os
+
 
 class DeviceManager(Screen):
 
     def get_neighbors(self):
-        nm = nmap.PortScanner()
-        print(nm.all_hosts())
-    pass
+        os.system ('net view > conn.tmp')
+        f = open ('conn.tmp', 'r')
+        f.readline ();
+        f.readline ();
+        f.readline ()
+
+        conn = []
+        host = f.readline ()
+        while host[0] == '\\':
+            conn.append (host[2:host.find (' ')])
+            host = f.readline ()
+
+        print
+        conn
+        f.close ()
