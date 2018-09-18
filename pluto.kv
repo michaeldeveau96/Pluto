@@ -1,3 +1,56 @@
+ScreenManagement:
+    HomeScreen:
+    SpeedTest:
+    DeviceManager:
+    ParentalControls:
+    BandwidthMonitor:
+
+<InitializerScreen>:
+    name: "Initializer"
+    Label:
+        text: "Initializer"
+
+<HomeScreen>:
+    name: "Home"
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: "Speed Test"
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            pos_hint: {'x': 0}
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'SpeedTest'
+
+        Button:
+            text: "Device Manager"
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            pos_hint: {'right': 1}
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'DeviceManager'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: "Parental Controls"
+            pos_hint: {'right': 1}
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'ParentalControls'
+
+        Button:
+            text: "Bandwidth Monitor"
+            pos_hint: {'top': 1}
+            size_hint_x: 0.5
+            size_hint_y: 0.5
+            on_press:
+                app.root.transition.direction = 'left'
+                app.root.current = 'BandwidthMonitor'
+
 <SpeedTest>:
     name: "SpeedTest"
     BoxLayout:
@@ -68,9 +121,3 @@
             Button:
                 text: "Check Bandwidth"
                 size_hint_x:50
-
-
-
-
-
-
