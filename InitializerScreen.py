@@ -7,4 +7,3 @@ class InitializerScreen(Screen):
     def startup(self):
         username = TextInput(text='Enter router username: ')
         password = TextInput(text='Enter router password: ')
-    pass

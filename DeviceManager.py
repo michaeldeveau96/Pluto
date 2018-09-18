@@ -7,7 +7,6 @@ import sys
 
 from scapy.layers.l2 import Ether, ARP
 
-
 class DeviceManager(Screen):
 
     def get_neighbors(self):
