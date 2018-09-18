@@ -17,12 +17,12 @@ class DeviceManager(Screen):
                 mac = line.split(': ', 1)[1]
                 mac = mac.split('\r', 1)[0]
                 macs = [mac]
-                print(macs)
+                return macs
 
         for line in netView.split('\n'):
             if 'Nmap scan report' in line:
                 ip = line.split('r ', 1)[1]
                 ip = ip.split('\r', 1)[0]
                 ips = [ip]
-                print(ips)
+                return ips
 
