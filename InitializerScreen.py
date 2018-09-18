@@ -1,5 +1,9 @@
 from kivy.uix.screenmanager import Screen
+from kivy.uix.textinput import TextInput
 
 
 class InitializerScreen(Screen):
-    pass
+    
+    def startup(self):
+        username = TextInput(text='Enter router username: ')
+        password = TextInput(text='Enter router password: ')
