@@ -53,13 +53,19 @@ ScreenManagement:
 
 <SpeedTest>:
     name: "SpeedTest"
+    speed: speed
+    BoxLayout:
+        id: speed
+        pos_hint: {'top': 1}
+        orientation: "vertical"
     BoxLayout:
         orientation:"vertical"
         height:"40dp"
         size_hint_y:None
+
         BoxLayout:
             Button:
-                text: "ButtonOne"
+                text: "Home"
                 size_hint_x:50
                 on_press:
                     app.root.transition.direction = 'right'
@@ -78,7 +84,7 @@ ScreenManagement:
         size_hint_y:None
         BoxLayout:
             Button:
-                text: "ButtonOne"
+                text: "Home"
                 size_hint_x:50
                 on_press:
                     app.root.transition.direction = 'right'
@@ -86,6 +92,7 @@ ScreenManagement:
             Button:
                 text:"Show Topology"
                 size_hint_x:50
+                on_press: root.get_neighbors()
 
 
 <ParentalControls>:
@@ -96,7 +103,7 @@ ScreenManagement:
         size_hint_y:None
         BoxLayout:
             Button:
-                text: "ButtonOne"
+                text: "Home"
                 size_hint_x:50
                 on_press:
                     app.root.transition.direction = 'right'
@@ -113,7 +120,7 @@ ScreenManagement:
         size_hint_y:None
         BoxLayout:
             Button:
-                text: "ButtonOne"
+                text: "Home"
                 size_hint_x:50
                 on_press:
                     app.root.transition.direction = 'right'
