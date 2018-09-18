@@ -1,90 +1,76 @@
-ScreenManagement:
-    HomeScreen:
-    SpeedTest:
-    DeviceManager:
-    ParentalControls:
-    BandwidthMonitor:
-
-<InitializerScreen>:
-    name: "Initializer"
-    Label:
-        text: "Initializer"
-
-<HomeScreen>:
-    name: "Home"
-    BoxLayout:
-        orientation: 'vertical'
-        Button:
-            text: "Speed Test"
-            size_hint_x: 0.5
-            size_hint_y: 0.5
-            pos_hint: {'x': 0}
-            on_press:
-                app.root.transition.direction = 'left'
-                app.root.current = 'SpeedTest'
-
-        Button:
-            text: "Device Manager"
-            size_hint_x: 0.5
-            size_hint_y: 0.5
-            pos_hint: {'right': 1}
-            on_press:
-                app.root.transition.direction = 'left'
-                app.root.current = 'DeviceManager'
-    BoxLayout:
-        orientation: 'vertical'
-        Button:
-            text: "Parental Controls"
-            pos_hint: {'right': 1}
-            size_hint_x: 0.5
-            size_hint_y: 0.5
-            on_press:
-                app.root.transition.direction = 'left'
-                app.root.current = 'ParentalControls'
-
-        Button:
-            text: "Bandwidth Monitor"
-            pos_hint: {'top': 1}
-            size_hint_x: 0.5
-            size_hint_y: 0.5
-            on_press:
-                app.root.transition.direction = 'left'
-                app.root.current = 'BandwidthMonitor'
-
 <SpeedTest>:
     name: "SpeedTest"
-    Button:
-        text: 'Home'
-        size_hint_x: 0.1
-        size_hint_y: 0.1
-        pos_hint: {'right': 0}
-        on_press:
-            app.root.transition.direction = 'right'
-            app.root.current = 'Home'
-    Label:
-        text: "Speed Test"
+    BoxLayout:
+        orientation:"vertical"
+        height:"40dp"
+        size_hint_y:None
+        BoxLayout:
+            Button:
+                text: "ButtonOne"
+                size_hint_x:50
+                on_press:
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'Home'
+            Button:
+                text: 'Speed Test'
+                size_hint_x:50
+                on_press: root.test()
 
-    Button:
-        text: 'Speed Test'
-        on_press: root.test()
 
 <DeviceManager>:
     name: "DeviceManager"
-    Label:
-        text: "Device Manager"
-    Button:
-        text: 'Get Neighbors'
-        on_press: root.get_neighbors()
+    BoxLayout:
+        orientation:"vertical"
+        height:"40dp"
+        size_hint_y:None
+        BoxLayout:
+            Button:
+                text: "ButtonOne"
+                size_hint_x:50
+                on_press:
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'Home'
+            Button:
+                text:"Show Topology"
+                size_hint_x:50
+
 
 <ParentalControls>:
-    name: "ParentalControls"
-    Label:
-        text: "Parental Controls"
+    name: 'ParentalControls'
+    BoxLayout:
+        orientation:"vertical"
+        height:"40dp"
+        size_hint_y:None
+        BoxLayout:
+            Button:
+                text: "ButtonOne"
+                size_hint_x:50
+                on_press:
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'Home'
+            Button:
+                text: "Edit Parental Controls"
+                size_hint_x:50
 
 <BandwidthMonitor>:
-    name: "BandwidthMonitor"
-    Label:
-        text: "Bandwidth Monitor"
+    name: 'BandwidthMonitor'
+    BoxLayout:
+        orientation:"vertical"
+        height:"40dp"
+        size_hint_y:None
+        BoxLayout:
+            Button:
+                text: "ButtonOne"
+                size_hint_x:50
+                on_press:
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'Home'
+            Button:
+                text: "Check Bandwidth"
+                size_hint_x:50
+
+
+
 
 
 
