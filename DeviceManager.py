@@ -25,3 +25,4 @@ class DeviceManager(Screen):
                 ip = ip.split('\r', 1)[0]
                 ips = [ip]
                 print(ips)
+
