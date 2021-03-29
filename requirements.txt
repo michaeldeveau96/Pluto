@@ -22,7 +22,7 @@ netaddr==0.7.19
 netifaces==0.10.7
 networkx==2.1
 plotly==3.2.1
-Pygments==2.2.0
+Pygments==2.7.4
 pypiwin32==223
 pyspeedtest==1.2.7
 python-nmap==0.6.1
